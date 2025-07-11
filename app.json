@@ -1,0 +1,42 @@
+{
+    "expo": {
+      "name": "Crypto AML Wallet Screening for React Native DEX",
+      "slug": "crypto-aml-wallet-screening-for-react-native-dex",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/images/icon.png",
+      "scheme": "myapp",
+      "userInterfaceStyle": "automatic",
+      "newArchEnabled": true,
+      "splash": {
+        "image": "./assets/images/splash-icon.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
+      "ios": {
+        "supportsTablet": true,
+        "bundleIdentifier": "app.rork.crypto-aml-wallet-screening-for-react-native-dex"
+      },
+      "android": {
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/images/adaptive-icon.png",
+          "backgroundColor": "#ffffff"
+        },
+        "package": "app.rork.crypto-aml-wallet-screening-for-react-native-dex"
+      },
+      "web": {
+        "favicon": "./assets/images/favicon.png"
+      },
+      "plugins": [
+        [
+          "expo-router",
+          {
+            "origin": "https://rork.com/"
+          }
+        ]
+      ],
+      "experiments": {
+        "typedRoutes": true
+      }
+    }
+  }
