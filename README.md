@@ -1,137 +1,71 @@
-# AML Checker - React Native App
+# Getting Started with Create React App
 
-A comprehensive Anti-Money Laundering (AML) wallet screening tool built with React Native and Expo. This app allows users to screen cryptocurrency wallet addresses for compliance and risk assessment.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Features
+## Available Scripts
 
-- **Address Screening**: Screen Ethereum wallet addresses for AML compliance
-- **Risk Assessment**: Get detailed risk scores and levels (Low, Medium, High, Extreme)
-- **Wallet Type Detection**: Identify hot wallets vs cold wallets
-- **Screening History**: View past screening results with caching
-- **Risk Indicators**: Visual indicators showing risk factors and flags
-- **Address Details**: Comprehensive view of screening results
+In the project directory, you can run:
 
-## Tech Stack
+### `npm start`
 
-- **Frontend**: React Native with Expo
-- **State Management**: Zustand
-- **Navigation**: Expo Router
-- **Icons**: Lucide React Native
-- **Styling**: React Native StyleSheet
-- **Caching**: In-memory cache with Redis-like interface
-- **Backend Ready**: Prepared for Node.js + Redis + PostgreSQL integration
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Color Scheme
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- **Primary**: #B1420A (Dark Orange)
-- **Background**: #000000 (Black)
-- **Secondary Background**: #1C1C1E (Dark Gray)
-- **Tertiary Background**: #2C2C2E (Medium Gray)
-- **Text**: #FFFFFF (White)
-- **Secondary Text**: #8E8E93 (Light Gray)
-- **Success**: #34C759 (Green)
-- **Danger**: #FF3B30 (Red)
-- **Warning**: #FF9500 (Orange)
+### `npm test`
 
-## Installation
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npx expo start
-   ```
+### `npm run build`
 
-## Project Structure
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```
-├── app/                    # App screens and navigation
-│   ├── _layout.tsx        # Root layout
-│   ├── index.tsx          # Main AML checker screen
-│   ├── screening-history.tsx
-│   └── address-details.tsx
-├── components/            # Reusable components
-│   ├── AddressInput.tsx
-│   ├── AmlRiskIndicator.tsx
-│   ├── Button.tsx
-│   └── ErrorBoundary.tsx
-├── constants/             # App constants
-│   └── colors.ts
-├── hooks/                 # Custom hooks
-│   └── useAMLScreening.ts
-├── services/              # Business logic
-│   └── amlService.ts
-├── types/                 # TypeScript types
-│   ├── wallet.ts
-│   └── aml.ts
-├── utils/                 # Utility functions
-│   └── amlHelpers.ts
-└── config/                # Configuration
-    └── redis.ts
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Key Components
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### AML Service
-- Mock AML screening with realistic risk assessment
-- In-memory caching with TTL
-- Wallet type detection (hot/cold)
-- Risk scoring based on address patterns
+### `npm run eject`
 
-### Risk Assessment
-- **Low Risk (0-39)**: Safe addresses with minimal indicators
-- **Medium Risk (40-69)**: Some risk factors requiring attention
-- **High Risk (70-89)**: Significant risk factors, proceed with caution
-- **Extreme Risk (90-100)**: Should be blocked, extremely high risk
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Wallet Types
-- **Hot Wallets**: Connected to internet, frequent transactions
-- **Cold Wallets**: Offline storage, enhanced security
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Test Addresses
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-The app includes pre-configured test addresses:
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- **Low Risk**: `0x742d35Cc6634C0532925a3b844Bc454e4438f44e` (Cold Wallet)
-- **Medium Risk**: `0x8C8D7C46219D9205f056f28fee5950aD564d7465` (Hot Wallet)  
-- **High Risk**: `0x6B175474E89094C44Da98b954EedeAC495271d0F` (Exchange Wallet)
+## Learn More
 
-## Backend Integration Ready
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-The app is prepared for backend integration with:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- **Redis Configuration**: Ready for production caching
-- **AML Provider Integration**: Structured for real AML APIs (Elliptic, Chainalysis, etc.)
-- **Database Schema**: Prepared for PostgreSQL integration
-- **API Endpoints**: Ready for REST API integration
+### Code Splitting
 
-## Development
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Adding New AML Providers
+### Analyzing the Bundle Size
 
-1. Update `services/amlService.ts` with provider-specific logic
-2. Add provider configuration in `types/aml.ts`
-3. Update environment variables for API keys
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Customizing Risk Logic
+### Making a Progressive Web App
 
-1. Modify risk scoring in `amlService.mockScreening()`
-2. Update risk thresholds in `utils/amlHelpers.ts`
-3. Adjust UI indicators in `components/AmlRiskIndicator.tsx`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## Production Deployment
+### Advanced Configuration
 
-For production deployment:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-1. Set up Redis for caching
-2. Configure PostgreSQL database
-3. Integrate with real AML provider APIs
-4. Set up proper environment variables
-5. Implement proper authentication and authorization
+### Deployment
 
-## License
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-MIT License - see LICENSE file for details.
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# KYC-frontend
